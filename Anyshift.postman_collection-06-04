@@ -1,0 +1,4317 @@
+{
+	"info": {
+		"_postman_id": "39ff05bb-0f51-4f90-80a6-7b598c130c83",
+		"name": "Anyshift",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Shift manager",
+			"item": [
+				{
+					"name": "Login SM",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "webophp2@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "ezKrgy$WR%bY",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "fcm_token",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/login",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "webophp2@gmail.com",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/forgot-password",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verifiy otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "webophp2@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "8325",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/verify-otp",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset passwort",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "webo.php2dev@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "hR7cCZXxMwdp",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "hR7cCZXxMwdp",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/reset-password",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nurse categories list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "de",
+									"description": "optional, search text",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/category-list",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"category-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Nurses by category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "page_number",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/nurses-by-category",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"nurses-by-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top nurses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "page_number",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/top-nurses",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"top-nurses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get nurse detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "nurse_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-nurse",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-nurse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "fo_id",
+									"value": "1",
+									"description": "required, Facility owner id",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required, Shift manager id",
+									"type": "text"
+								},
+								{
+									"key": "fc_cat_id",
+									"value": "1",
+									"description": "required, Facility Category id",
+									"type": "text"
+								},
+								{
+									"key": "cg_cat_id",
+									"value": "1",
+									"description": "required, NurseCategory id",
+									"type": "text"
+								},
+								{
+									"key": "job_title",
+									"value": "Day care",
+									"description": "required, Job title",
+									"type": "text"
+								},
+								{
+									"key": "job_description",
+									"value": "desc",
+									"description": "required, Job description",
+									"type": "text"
+								},
+								{
+									"key": "shift_type",
+									"value": "night",
+									"description": "required, day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "job_hours",
+									"value": "8",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "is_premium",
+									"value": "yes",
+									"description": "required, yes/no",
+									"type": "text"
+								},
+								{
+									"key": "job_rate",
+									"value": "100",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_prem_rate",
+									"value": "100",
+									"description": "job premium rate",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-12-15",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2022-12-30",
+									"type": "text"
+								},
+								{
+									"key": "service",
+									"value": "pathalogy service",
+									"type": "text"
+								},
+								{
+									"key": "shift_duration",
+									"value": "10",
+									"description": "/api/v1/nurse/get-shiftDuration",
+									"type": "text"
+								},
+								{
+									"key": "collection_fee",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "positions",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "new york",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/create",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "3",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/active",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Posted jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/posted",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"posted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expired jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/expired",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"expired"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  total jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/my_total_jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"my_total_jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - get shortlisted",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-shortlisted",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-shortlisted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - get past",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "test",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-past",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-past"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - get Interested",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-interested",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-interested"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - get hired",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-hired",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-hired"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - get dnr",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-dnr",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-dnr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - shortlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/shortlist",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"shortlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - remove shortlist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "2",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/remove-shortlist",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"remove-shortlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My  nurses - remove DNR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "required, id from /api/nurse/get-dnr",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/remove-dnr",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"remove-dnr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove single nurse DNR by cg_id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/remove-nurse-dnr",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"remove-nurse-dnr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seach nurses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "1",
+									"description": "optional, nurse category id",
+									"type": "text"
+								},
+								{
+									"key": "speciality",
+									"value": "2",
+									"description": "optional /nurse/get-speciality",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "optional, day/night/any",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "hours",
+									"value": "8",
+									"description": "optional",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "premium",
+									"value": "no",
+									"description": "optional, yes/no",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "search_text",
+									"value": "RN",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page_number",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "sm_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/search",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seach nurses Most recent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "1",
+									"description": "optional, nurse category id",
+									"type": "text"
+								},
+								{
+									"key": "speciality",
+									"value": "2",
+									"description": "optional, nurse/get-speciality",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "optional, day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "hours",
+									"value": "8",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "premium",
+									"value": "no",
+									"description": "optional, yes/no",
+									"type": "text"
+								},
+								{
+									"key": "search_text",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/most-recent",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"most-recent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seach nurses Most relevant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "1",
+									"description": "optional, nurse category id",
+									"type": "text"
+								},
+								{
+									"key": "speciality",
+									"value": "1",
+									"description": "optional, nurse/get-speciality",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "optional, day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "hours",
+									"value": "8",
+									"description": "optional",
+									"type": "text"
+								},
+								{
+									"key": "premium",
+									"value": "no",
+									"description": "optional, yes/no",
+									"type": "text"
+								},
+								{
+									"key": "search_text",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/most-relevant",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"most-relevant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send offer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "12",
+									"description": "required, job_id attribute in interested nurses / id attr from jobs/list",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "7",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/send-offer",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"send-offer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hire",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required, id attribute in interested nurses",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/hire",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"hire"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end contract",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "32",
+									"description": "required, id attribute from /nurse/get-hired",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/end-contract",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"end-contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "12",
+									"description": "required, id attribute in interested nurses/my-jobs-offered",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/accept",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reject job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required, id attribute in interested nurses/my-jobs-offered",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/reject",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"reject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required, id attribute in interested nurses",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/cancel",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required, id attribute in interested nurses",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "feedback",
+									"value": "qwerty",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/feedback",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nurse Feedback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "feedback",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/feedback",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get facility profile data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "fo_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/facility/get",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facility",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get job details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/get",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Jobs list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "page_number",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/list",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "facility category list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/facility/category-list",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facility",
+								"category-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shift manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sm_fname",
+									"value": "shift",
+									"type": "text"
+								},
+								{
+									"key": "sm_lname",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "sm_email",
+									"value": "qwerty@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "sm_mobile",
+									"value": "54875487",
+									"type": "text"
+								},
+								{
+									"key": "sm_password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/anyshift/api/v1/user/update-shift-manager",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anyshift",
+								"api",
+								"v1",
+								"user",
+								"update-shift-manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get shift manager data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-shift-manager",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-shift-manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "cg",
+									"description": "'fo', 'sm', 'cg'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-all",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get recent notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "cg",
+									"description": "'fo', 'sm', 'cg'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-recent",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-recent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get earlier notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "cg",
+									"description": "'fo', 'sm', 'cg'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-earlier",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-earlier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get archieved notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "user_type",
+									"value": "cg",
+									"description": "'fo', 'sm', 'cg'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-archieved",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-archieved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/read-notification",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"read-notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Home screen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/read-notification",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"read-notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "About app",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/about-app",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"about-app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Privacy policy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/privacy-policy",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"privacy-policy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all notifications General",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-general",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-general"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all notifications Application",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/get-notifications-applications",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"get-notifications-applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit help",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "sdfg",
+									"type": "text"
+								},
+								{
+									"key": "help_text",
+									"value": "cvbnm",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/help",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"help"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile pic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_image",
+									"description": "required",
+									"type": "file",
+									"src": "/C:/Users/prati/Desktop/images.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/user/update-profile-pic",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update-profile-pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add DNR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sm_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/add-dnr",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"add-dnr"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nurse",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "afsana@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "fcm_token",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/login",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_email",
+									"value": "tes127@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_fname",
+									"value": "qwert",
+									"description": "required, first name",
+									"type": "text"
+								},
+								{
+									"key": "cg_lname",
+									"value": "adasd",
+									"description": "required, last name",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "WeboConnect123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "WeboConnect123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "license_state",
+									"value": "1",
+									"description": "nurse/get-liceneStates",
+									"type": "text"
+								},
+								{
+									"key": "speciality",
+									"value": "2",
+									"description": "nurse/get-speciality",
+									"type": "text"
+								},
+								{
+									"key": "preferred_geography",
+									"value": "3",
+									"description": "nurse/get-geography",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "1",
+									"description": "/nurse/category-list",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/register",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get license states",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-liceneStates",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-liceneStates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get speciality",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-speciality",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-speciality"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get preferred geography",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-preferredGeography",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-preferredGeography"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get licenseTypes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-licenseTypes",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-licenseTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get jobTitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-jobTitle",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-jobTitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get slot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-slot",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-slot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get nurse degree",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-nurseDegree",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-nurseDegree"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get searchCredential",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-searchCredential",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-searchCredential"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get availability",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-availability",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get shiftDuration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-shiftDuration",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-shiftDuration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get preferredShift",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-preferredShift",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-preferredShift"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get countries",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-countries",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get states",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-states",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-states"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My jobs offered",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "text",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/my-jobs-offered",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"my-jobs-offered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My jobs applied",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/my-jobs-applied",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"my-jobs-applied"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My jobs active",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/my-jobs-active",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"my-jobs-active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My jobs completed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/my-jobs-completed",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"my-jobs-completed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personal-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required, nurse logged in id ",
+									"type": "text"
+								},
+								{
+									"key": "cg_fname",
+									"value": "webo",
+									"description": "required, first name",
+									"type": "text"
+								},
+								{
+									"key": "cg_lname",
+									"value": "test",
+									"description": "required, last name",
+									"type": "text"
+								},
+								{
+									"key": "cg_email",
+									"value": "webtest@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_mobile",
+									"value": "9854875487",
+									"type": "text"
+								},
+								{
+									"key": "cg_fcm_token",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cg_device_token",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cg_profile_pic",
+									"type": "file",
+									"src": "/C:/Users/prati/Downloads/logo (2).png"
+								},
+								{
+									"key": "cg_lat",
+									"value": "12.112",
+									"type": "text"
+								},
+								{
+									"key": "cg_long",
+									"value": "10.233",
+									"type": "text"
+								},
+								{
+									"key": "cg_address",
+									"value": "address",
+									"type": "text"
+								},
+								{
+									"key": "cg_zipcode",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "cg_country",
+									"value": "1",
+									"description": "id from /nurse/get-countries",
+									"type": "text"
+								},
+								{
+									"key": "cg_state",
+									"value": "1",
+									"description": "id from /nurse/get-states",
+									"type": "text"
+								},
+								{
+									"key": "cg_city",
+									"value": "mumbai",
+									"type": "text"
+								},
+								{
+									"key": "license_state",
+									"value": "1",
+									"description": "/nurse/get-liceneStates",
+									"type": "text"
+								},
+								{
+									"key": "license_number",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "license_type",
+									"value": "4",
+									"description": "/nurse/get-licenseTypes",
+									"type": "text"
+								},
+								{
+									"key": "search_status",
+									"value": "ss",
+									"type": "text"
+								},
+								{
+									"key": "speciality",
+									"value": "2",
+									"description": "/nurse/get-speciality",
+									"type": "text"
+								},
+								{
+									"key": "cg_gender",
+									"value": "Male",
+									"description": "'Male', 'Female', 'Other'",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/personal-details",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"personal-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "professional-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "/C:/Users/prati/Downloads/dummy.pdf"
+								},
+								{
+									"key": "certificate[]",
+									"type": "file",
+									"src": [
+										"/C:/Users/prati/Downloads/sample.pdf",
+										"/C:/Users/prati/Downloads/dummy.pdf"
+									]
+								},
+								{
+									"key": "experience[]",
+									"type": "file",
+									"src": "/C:/Users/prati/Downloads/sample.pdf"
+								},
+								{
+									"key": "nurse_degree",
+									"value": "5",
+									"description": "/nurse/get-nurseDegree",
+									"type": "text"
+								},
+								{
+									"key": "university_name",
+									"value": "mumbai univ",
+									"type": "text"
+								},
+								{
+									"key": "university_country",
+									"value": "1",
+									"description": "/nurse/get-countries",
+									"type": "text"
+								},
+								{
+									"key": "university_state",
+									"value": "1",
+									"description": "/nurse/get-states",
+									"type": "text"
+								},
+								{
+									"key": "university_city",
+									"value": "mumbai",
+									"type": "text"
+								},
+								{
+									"key": "job_title",
+									"value": "6",
+									"description": "/nurse/get-jobTitle",
+									"type": "text"
+								},
+								{
+									"key": "slot",
+									"value": "7",
+									"description": "/nurse/get-slot",
+									"type": "text"
+								},
+								{
+									"key": "feedback",
+									"value": "feedback",
+									"type": "text"
+								},
+								{
+									"key": "search_cred",
+									"value": "8",
+									"description": "nurse/get-searchCredential",
+									"type": "text"
+								},
+								{
+									"key": "effective_date",
+									"value": "2023=01-01",
+									"description": "Y-m-d",
+									"type": "text"
+								},
+								{
+									"key": "expiration_date",
+									"value": "2023-02-01",
+									"description": "Y-m-d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/professional-details",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"professional-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "preferences-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "preferred_days",
+									"value": "monday,tuesday,friday",
+									"type": "text"
+								},
+								{
+									"key": "hourly_charges",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "availability",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "shift_duration",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "assignment_duration",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "preferred_shift",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "preferred_geography",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "earliest_start_date",
+									"value": "2023-02-01",
+									"description": "Y-m-d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/preference-details",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"preference-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit favorite job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/job-favourite",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"job-favourite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove favorite job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/remove-job-favourite",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"remove-job-favourite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get job details by id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "clock_from_date",
+									"value": "2023-03-01",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "clock_to_date",
+									"value": "2023-03-25",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-job-details",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-job-details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get popular-jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/popular-jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"popular-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get recommended-jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/recommended-jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"recommended-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock-In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "clock_in",
+									"value": "2023-03-15 20:00",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/clock-in",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"clock-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clock-out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "clock_out",
+									"value": "2023-03-16 03:00",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/clock-out",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"clock-out"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home screen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/home-screen",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"home-screen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "11",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/jobs/apply",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "test",
+									"description": "search text",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "1",
+									"description": "api/v1/facility/category-list",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"description": "/api/v1/nurse/category-list",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "hours",
+									"value": "10",
+									"description": "api/v1/nurse/get-shiftDuration",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_from",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_to",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/search-jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"search-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Most relevant jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "test",
+									"description": "search text",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "1",
+									"description": "api/v1/facility/category-list",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"description": "/api/v1/nurse/category-list",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "hours",
+									"value": "10",
+									"description": "api/v1/nurse/get-shiftDuration",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_from",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_to",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/most-relevant-jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"most-relevant-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Most recent jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "search",
+									"value": "test",
+									"description": "search text",
+									"type": "text"
+								},
+								{
+									"key": "department",
+									"value": "1",
+									"description": "api/v1/facility/category-list",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"description": "/api/v1/nurse/category-list",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "day",
+									"description": "day/night/any",
+									"type": "text"
+								},
+								{
+									"key": "hours",
+									"value": "10",
+									"description": "api/v1/nurse/get-shiftDuration",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_from",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "salary_range_to",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/most-recent-jobs",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"most-recent-jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete nurse docs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "2",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "2",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/delete-document",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"delete-document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete nurse resume",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/delete-resume",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"delete-resume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get general notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "7",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-notifications-general",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-notifications-general"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get applications notifications",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "7",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/get-notifications-applications",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"get-notifications-applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit help",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "qwerty",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "help_text",
+									"value": "text",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/help",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"help"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile-pic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_profile_pic",
+									"description": "required",
+									"type": "file",
+									"src": "/C:/Users/prati/Desktop/images.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/update-profile-pic",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"update-profile-pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download invoice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "api_key",
+									"value": "123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cg_id",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "job_id",
+									"value": "13",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "clock_from_date",
+									"value": "2023-01-01",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "clock_to_date",
+									"value": "2023-08-01",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{live}}/api/v1/nurse/download-invoice",
+							"host": [
+								"{{live}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"nurse",
+								"download-invoice"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost/anyshift"
+		},
+		{
+			"key": "live",
+			"value": "https://jobpazi.in/anyshyft1"
+		}
+	]
+}
